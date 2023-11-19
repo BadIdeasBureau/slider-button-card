@@ -127,7 +127,8 @@ export class LightController extends Controller {
     }
 
     this._hass.callService('light', service, {
-      ...data
+      ...data,
+      transition: 1
     });
   }
 
